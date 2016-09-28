@@ -27,6 +27,7 @@ public class ControllerLogin {
 		
 	}
 	
+	//metodo que carga en una lista los cargado por el formulario
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public ModelAndView login(@ModelAttribute Login login){
 		ModelMap usuario = new ModelMap();

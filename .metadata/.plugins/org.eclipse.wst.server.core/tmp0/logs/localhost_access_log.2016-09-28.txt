@@ -1,0 +1,9 @@
+127.0.0.1 - - [28/Sep/2016:20:29:29 -0300] "GET / HTTP/1.1" 404 961
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:20:29:37 -0300] "GET /proyecto-base-spring/ HTTP/1.1" 200 3112
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:20:29:37 -0300] "GET /proyecto-base-spring/js/bootstrap.min.js HTTP/1.1" 200 36822
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:20:29:37 -0300] "GET /proyecto-base-spring/css/bootstrap.min.css HTTP/1.1" 200 148191
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:20:29:38 -0300] "GET /proyecto-base-spring/img/tragos2.jpg HTTP/1.1" 200 231463
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:20:29:38 -0300] "GET /favicon.ico HTTP/1.1" 404 983
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:20:29:41 -0300] "GET /proyecto-base-spring/login HTTP/1.1" 200 3760
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:20:29:42 -0300] "GET /proyecto-base-spring/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:20:29:47 -0300] "POST /proyecto-base-spring/login HTTP/1.1" 200 3795
