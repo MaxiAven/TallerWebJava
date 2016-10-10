@@ -1,0 +1,19 @@
+package ar.edu.grupoesfera.cursospring.modelo;
+
+public class Bebida {
+	
+	private String idBebida;
+	private String nombre;
+	public String getIdBebida() {
+		return idBebida;
+	}
+	public void setIdBebida(String idBebida) {
+		this.idBebida = idBebida;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+}
