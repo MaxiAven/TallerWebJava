@@ -1,4 +1,4 @@
-
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -59,30 +59,36 @@
 			  	<h3>Registro</h3>
 			  </div>
 			  <div class="panel-body">
-			    <form>
-				  <div class="form-group">
-				    <label for="Nombre">Nombre:</label>
-				    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-				  </div>
-				  <div class="form-group">
-				    <label for="Apellido">Apellido:</label>
-				    <input type="password" class="form-control" id="apellido" placeholder="Apellido">
-				  </div>
-				  <div class="form-group">
-				    <label for="Fecha">Fecha de Nacimiento:</label>
-				    <input type="text" class="form-control" id="fecha" placeholder="Fecha">
-				  </div>
-				  
-				  <div class="form-group">
-				    <label for="email">Correo:</label>
-				    <input type="email" class="form-control" id="email" placeholder="Correo electrónico">
-				  </div>
-				  
-				  <button type="submit" class="btn btn-primary">Registrarme</button>
-				</form>
-			  </div>
-			</div>
-    
+			  <form:form action="registro" method="POST" modelAttribute="usuario">
+			  	<div class="form-group has-feedback has-feedback-left">
+		
+					<label for="nombre">Nombre:</label>
+					<form:input path="nombre" class="form-control"/>
+				
+				</div>
+				
+				<div class="form-group has-feedback has-feedback-left">
+		
+					<label for="apellido">Apellido:</label>
+					<form:input path="apellido" class="form-control"/>
+				</div>
+				
+				<div class="form-group has-feedback has-feedback-left">
+		
+					<label for="fecha">Fecha:</label>
+					<form:input path="fecha" class="form-control"/>
+				</div>
+				
+				<div class="form-group has-feedback has-feedback-left">
+		
+					<label for="pass">Contraseña:</label>
+					<form:input path="password" class="form-control"/>
+				</div>
+	
+					<input type="submit" value="enviar" class="btn btn-primary"/>
+					
+					</form:form>
+			   
     	</div>
     	<div class="col-md-3"></div>
 	</div>

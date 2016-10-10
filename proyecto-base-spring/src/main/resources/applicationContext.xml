@@ -22,6 +22,8 @@
 	<aop:aspectj-autoproxy />
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	<context:component-scan base-package="ar.edu.grupoesfera.cursospring.controladores" />
+	<context:component-scan base-package="ar.edu.grupoesfera.cursospring.servicios" />
+	<context:component-scan base-package="ar.edu.grupoesfera.cursospring.modelo" />
 	<!--<context:component-scan base-package="ar.edu.grupoesfera.cursospring.dao" />
 	<context:component-scan base-package="ar.edu.grupoesfera.cursospring.aop" />
 	<context:component-scan base-package="ar.edu.grupoesfera.cursospring.servicios" />-->

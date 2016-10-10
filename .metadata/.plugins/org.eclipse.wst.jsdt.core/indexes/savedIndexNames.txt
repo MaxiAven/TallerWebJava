@@ -3,4 +3,7 @@ INDEX VERSION 1.3+C:\Users\MaxPower\Java\proyectos\TallerWebJava\.metadata\.plug
 4157531296.index
 2148699517.index
 1101998068.index
+2568218980.index
+1235687774.index
+4267378149.index
 2375727784.index

@@ -8,6 +8,6 @@ public class ControllerIndex {
 	
 	@RequestMapping("/index")//url que atiende
 	public ModelAndView Index(){
-		return new ModelAndView("index");
+		return new ModelAndView("redirect:/");
 	}
 }

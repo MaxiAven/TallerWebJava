@@ -1,0 +1,33 @@
+package ar.edu.grupoesfera.cursospring.modelo;
+
+public class Usuario {
+	
+	private String nombre;
+	private String apellido;
+	private Integer fecha;
+	private String password;
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getApellido() {
+		return apellido;
+	}
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	public Integer getFecha() {
+		return fecha;
+	}
+	public void setFecha(Integer fecha) {
+		this.fecha = fecha;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+}
