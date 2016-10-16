@@ -31,6 +31,7 @@ public class ControllerRegistro {
 		registroUsuario.put("apellido", usuario.getApellido());
 		registroUsuario.put("fecha", usuario.getFecha());
 		registroUsuario.put("password", usuario.getPassword());
+		registroUsuario.put("nombreUsuario", usuario.getNombreUsuario());
 		return new ModelAndView("confirmaRegistro",registroUsuario);
 	}
 

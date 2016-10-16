@@ -75,14 +75,20 @@
 				
 				<div class="form-group has-feedback has-feedback-left">
 		
+					<label for="usr">Nombre de Usuario:</label>
+					<form:input path="nombreUsuario" class="form-control"/>
+				</div>
+				
+				<div class="form-group has-feedback has-feedback-left">
+		
 					<label for="fecha">Fecha:</label>
-					<form:input path="fecha" class="form-control"/>
+					<form:input path="fecha" class="form-control" />
 				</div>
 				
 				<div class="form-group has-feedback has-feedback-left">
 		
 					<label for="pass">Contraseña:</label>
-					<form:input path="password" class="form-control"/>
+					<form:input path="password" class="form-control" type="password"/>
 				</div>
 	
 					<input type="submit" value="enviar" class="btn btn-primary"/>

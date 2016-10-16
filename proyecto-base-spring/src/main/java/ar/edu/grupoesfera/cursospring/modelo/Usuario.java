@@ -4,6 +4,7 @@ public class Usuario {
 	
 	private String nombre;
 	private String apellido;
+	private String nombreUsuario;
 	private Integer fecha;
 	private String password;
 	
@@ -20,6 +21,14 @@ public class Usuario {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+	
+	public String getNombreUsuario() {
+		return nombreUsuario;
+	}
+	public void setNombreUsuario(String nombreUsuario) {
+		this.nombreUsuario = nombreUsuario;
+	}
+	
 	public Integer getFecha() {
 		return fecha;
 	}
@@ -32,4 +41,5 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
 }

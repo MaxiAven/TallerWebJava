@@ -112,3 +112,9 @@
 0:0:0:0:0:0:0:1 - - [10/Oct/2016:16:18:24 -0300] "GET /proyecto-base-spring/index HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [10/Oct/2016:16:18:24 -0300] "GET /proyecto-base-spring/ HTTP/1.1" 200 3112
 0:0:0:0:0:0:0:1 - - [10/Oct/2016:16:18:28 -0300] "GET /proyecto-base-spring/registro HTTP/1.1" 200 3985
+127.0.0.1 - - [10/Oct/2016:17:57:03 -0300] "GET / HTTP/1.1" 404 961
+0:0:0:0:0:0:0:1 - - [10/Oct/2016:17:57:03 -0300] "GET /proyecto-base-spring/ HTTP/1.1" 200 3112
+0:0:0:0:0:0:0:1 - - [10/Oct/2016:17:57:08 -0300] "GET /proyecto-base-spring/registro HTTP/1.1" 200 3985
+0:0:0:0:0:0:0:1 - - [10/Oct/2016:17:57:17 -0300] "POST /proyecto-base-spring/registro HTTP/1.1" 200 3081
+0:0:0:0:0:0:0:1 - - [10/Oct/2016:17:57:21 -0300] "GET /proyecto-base-spring/index HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Oct/2016:17:57:21 -0300] "GET /proyecto-base-spring/ HTTP/1.1" 200 3112
