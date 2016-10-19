@@ -1,7 +1,0 @@
-package ar.edu.grupoesfera.cursospring.modelo;
-
-public class Bebidas {
-	
-	private String nombre;
-	private String 
-}

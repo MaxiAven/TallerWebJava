@@ -14,9 +14,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.grupoesfera.cursospring.modelo.Login;
 
+
 @Controller
 public class ControllerLogin {
-
+	
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public ModelAndView login(){
 		ModelMap model = new ModelMap();
@@ -30,18 +31,26 @@ public class ControllerLogin {
 	//metodo que carga en una lista lo cargado por el formulario
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public ModelAndView login(@ModelAttribute Login login){
-		ModelMap usuario = new ModelMap();
 		
-		ArrayList<Login> lista = new ArrayList<Login>();
-		lista.add(login);
-		System.out.println(lista);
-		Iterator<Login> iterator = lista.iterator();
-		while(iterator.hasNext()){
-			Login valor = iterator.next();
-			usuario.put("nombre",valor.getNombre());
-			usuario.put("apellido", valor.getApellido());
+		Login maxi = new Login();
+		maxi.setNombre("maxi");
+		maxi.setPassword("1234");
+		
+		
+		ArrayList<Login> logueos = new ArrayList<Login>();
+		logueos.add(maxi);
+		
+		for(Login usuario : logueos){
+			if(usuario.getNombre().equals(login.getNombre()) && usuario.getPassword().equals(login.getPassword())){
+			ModelAndView model = new ModelAndView("panel");
+			return model;
+			}	else{
+				ModelAndView model = new ModelAndView("msjError");
+				return model;
+			}
+			
 		}
-		return new ModelAndView("login",usuario);
-		
+		return null;
+			
 	}
 }

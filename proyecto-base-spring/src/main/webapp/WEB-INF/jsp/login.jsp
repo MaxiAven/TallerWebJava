@@ -71,15 +71,14 @@
 				<div class="form-group has-feedback has-feedback-left">
 		
 					<label for="usuario">pass:</label>
-					<form:input path="apellido" class="form-control"/>
+					<form:input path="password" class="form-control"/>
 					<i class="form-control-feedback glyphicon glyphicon-lock"></i>
 				</div>
 	
-					<input type="submit" value="enviar" class="btn btn-primary"/>
+					<input type="submit" value="Log In" class="btn btn-primary"/>
 					
 					</form:form>
-			
-					${nombre} - ${apellido}
+		
 					
 			  </div>
 			</div>

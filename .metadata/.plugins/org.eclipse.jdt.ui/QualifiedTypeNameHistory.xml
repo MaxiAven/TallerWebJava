@@ -3,4 +3,5 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
 <fullyQualifiedTypeName name="ar.edu.grupoesfera.cursospring.modelo.Usuario"/>
 <fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
+<fullyQualifiedTypeName name="ar.edu.grupoesfera.cursospring.modelo.Login"/>
 </qualifiedTypeNameHistroy>
