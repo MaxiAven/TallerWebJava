@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/stylo.css">
 
     <title>QueTomamos | Recetas con Onda</title>
 
@@ -37,13 +38,13 @@
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Busca un trago">
         </div>
-        <button type="submit" class="btn btn-default">Buscar</button>
+        <input type="button" class="btn" style='background:url("img/css.png") no-repeat;
+}'  ></input>
       </form>
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="index">Home</a></li>
             <li><a href="login">Ingresar</a></li>
-            <li><a href="#contact">Contacto</a></li>
-            
+           
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -54,8 +55,8 @@
     	<div class="col-md-8 contenido">
     		<div class="jumbotron">
     			<h2>TomemosAlgo.com</h2>
-    			<h3>Es un sitio para que puedas disfrutar de la buena bebida.</h3>
-    			<a href="registro" class="btn btn-primary">Registrate</a>
+    			<h3>Es un sitio para que puedas disfrutar de buenos tragos.</h3>
+    			
     			<a href="lista" class="btn btn-success btnLista">Ver Recetas</a>
     		</div>
     	</div>
@@ -63,14 +64,9 @@
 	</div>
    <!-- /container -->
 
-	<footer class="footer">
-	<div class="col-md-3"></div>
-	<div class="col-md-6">
-		<p>®Todos los derechos reservados | 2016</p>
-	</div>
-	<div class="col-md-3"></div>
 	
-</footer>
+	
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

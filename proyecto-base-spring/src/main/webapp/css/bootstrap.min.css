@@ -239,7 +239,10 @@ td, th {
 		page-break-after: avoid
 	}
 	.navbar {
-		display: none;
+		
+
+    background-color: red;
+
 	}
 	
 
@@ -1357,6 +1360,7 @@ body {
 	background-color: #f5f5f5; 
 	background-image:url(../img/tragos2.jpg);
 	background-size:cover;
+	opacity:0.8;
 }
 
 tcolor{
@@ -2863,7 +2867,7 @@ output {
 	background-color: #fff;
 	background-image: none;
 	border: 1px solid #ccc;
-	border-radius: 4px;
+	border-radius: 54px;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
@@ -3337,7 +3341,7 @@ select[multiple].input-lg, textarea.input-lg {
 	user-select: none;
 	background-image: none;
 	border: 1px solid transparent;
-	border-radius: 4px
+	border-radius: 2px
 }
 
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus,
@@ -3348,7 +3352,7 @@ select[multiple].input-lg, textarea.input-lg {
 }
 
 .btn.focus, .btn:focus, .btn:hover {
-	color: #333;
+	color: #6E6E6E;
 	text-decoration: none
 }
 
@@ -3484,14 +3488,14 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn-success {
-	color: #fff;
-	background-color: #5cb85c;
-	border-color: #4cae4c
+	color: #D8D8D8;
+	background-color: #6E6E6E;
+	border-color: #1C1C1C
 }
 
 .btn-success.focus, .btn-success:focus {
 	color: #fff;
-	background-color: #449d44;
+	background-color: #4c4e4c;
 	border-color: #255625
 }
 
@@ -5020,8 +5024,8 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 
 .navbar-inverse {
-	background-color: #4caf50  !important;
-	border-color: #4caf50;
+	background-color: #1C1C1C  ;//barra
+	border-color: #1C1C1C;
 }
 
 .navbar-inverse .navbar-brand {
@@ -5051,7 +5055,8 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus,
 	.navbar-inverse .navbar-nav>.active>a:hover {
 	color: #fff;
-	background-color: #66bb6a
+	background-color: #585858
+
 }
 
 .navbar-inverse .navbar-nav>.disabled>a, .navbar-inverse .navbar-nav>.disabled>a:focus,
@@ -6250,6 +6255,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:focus,
 	color: #fff;
 	background-color: #4caf50;
 	border-color: #4caf50;
+	opacity: 0.5;
 }
 
 .panel-default>.panel-heading+.panel-collapse>.panel-body {
@@ -7471,4 +7477,9 @@ button.close {
 	padding-bottom:10px;
 	font-weight:bold;
 }
+}
+.lupa{
+	vertical-align: middle;
+	height: 200px;
+	width: 200px;
 }
