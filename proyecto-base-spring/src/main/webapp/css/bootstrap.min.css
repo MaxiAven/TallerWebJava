@@ -5444,7 +5444,7 @@ a.badge:focus, a.badge:hover {
 }
 
 .container .jumbotron, .container-fluid .jumbotron {
-	border-radius: 6px
+	border-radius: 36px
 }
 
 .jumbotron .container {

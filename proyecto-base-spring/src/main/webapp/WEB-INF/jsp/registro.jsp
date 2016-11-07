@@ -1,4 +1,4 @@
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+1<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -59,7 +59,7 @@
 			  	<h3>Registro</h3>
 			  </div>
 			  <div class="panel-body">
-			  <form:form action="registro" method="POST" modelAttribute="usuario">
+			  <form:form action="agregarUsuario" method="POST" modelAttribute="usuario">
 			  	<div class="form-group has-feedback has-feedback-left">
 		
 					<label for="nombre">Nombre:</label>
@@ -77,12 +77,6 @@
 		
 					<label for="usr">Nombre de Usuario:</label>
 					<form:input path="nombreUsuario" class="form-control"/>
-				</div>
-				
-				<div class="form-group has-feedback has-feedback-left">
-		
-					<label for="fecha">Fecha:</label>
-					<form:input path="fecha" class="form-control" />
 				</div>
 				
 				<div class="form-group has-feedback has-feedback-left">
