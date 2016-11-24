@@ -59,29 +59,30 @@
 		<div class="col-md-2"></div>
 		<div class="col-md-8 fondoTabla">
 			<!-- Comienzo contenedor de receta -->
+			<h3>Editar receta</h3>
 
-			<h3>LISTA DE RECETAS</h3>
-			<table class="table table-hover ">
-				<tr>
-					<th>TITULO</th>
-					<th>DESCRIPCION</th>
-					<th>ACCION</th>
-					<th>ACCION</th>
-				</tr>
-				<c:forEach items="${ListaRecetas}" var="receta">
-					<tr class="filas">
-						<td width="50px">${receta.getTitulo()}</td>
-						<td width="100px">${receta.getDescripcion()}</td>
+			<form:form action="agregarReceta" method="POST" commandName="receta">
+				<div class="form-group has-feedback has-feedback-left">
 
-						<td width="20px"><a
-							href='eliminarReceta?id=${receta.getIdReceta()}'> <input
-								type="submit" value="Eliminar receta" class="btn btn-danger" />
-						</a></td>
-						<td width="20px"><a
-							href='editarReceta?id=${receta.getIdReceta()}'> <input
-								type="submit" value="Editar receta" class="btn btn-success" /></a></td>
-				</c:forEach>
-			</table>
+					<form:label path="IdReceta"></form:label>
+							<form:hidden path="IdReceta" value="${receta.getIdReceta()}" class="form-control" />
+							
+							<form:label path="titulo">titulo:</form:label>
+							<form:input path="titulo" value="${receta.getTitulo()}" class="form-control" />
+
+
+				</div>
+
+				<div class="form-group has-feedback has-feedback-left">
+
+					<form:label path="descripcion">descripcion:</form:label>
+					<form:textarea path="descripcion" value="${receta.getDescripcion()}" class="form-control recetaDescripcion" rows="10"/>
+				</div>
+
+				<input type="submit" value="Editar" class="btn btn-primary" />
+				
+			</form:form>
+
 		</div>
 		<div class="col-md-2"></div>
 

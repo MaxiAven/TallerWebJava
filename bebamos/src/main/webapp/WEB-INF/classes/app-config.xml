@@ -10,10 +10,10 @@
 	<context:component-scan base-package="ar.edu.grupoesfera.cursospring.controladores" />
 	
 	<!-- Configures the @Controller programming model -->
-	<mvc:resources location="/css/" mapping="/css/**"/>
-	<mvc:resources location="/fonts/" mapping="/fonts/**"/>
-	<mvc:resources location="/img/" mapping="/img/**"/>
-	<mvc:resources location="/js/" mapping="/js/**"/>
+	<mvc:resources location="/css/**" mapping="/css/**"/>
+	<mvc:resources location="/img/**" mapping="/img/**"/>
+	<mvc:resources location="/fonts/**" mapping="/fonts/**"/> 
+	<mvc:resources location="/js/**" mapping="/js/**"/>
 	<mvc:annotation-driven />
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

@@ -7483,3 +7483,11 @@ button.close {
 	height: 200px;
 	width: 200px;
 }
+
+.fondoTabla{
+	background:#fff;
+}
+
+.recetaDescripcion{
+	border-radius:3px;
+}

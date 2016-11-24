@@ -1,3 +1,5 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,12 +58,36 @@
 	<div class="container">
 		<div class="col-md-2"></div>
 		<div class="col-md-8 contenido">
-			<div class="jumbotron">
-				<h2>TomemosAlgo.com</h2>
-				<h3>Es un sitio para que puedas disfrutar de buenos tragos.</h3>
+				<!-- Comienzo contenedor de receta -->
+	
+			
+			<div class="panel panel-default md">
+				<div class="panel-heading tcolor">
+					<!-- Comienzo contenedor de receta -->
 
-				<a href="receta" class="btn btn-success btnLista">Ver Recetas</a>
+					<h3 align="center">LISTA DE RECETAS</h3>
+				</div>
+				<table class="table table-hover fondoTabla">
+					<tr>
+						<th>TITULO</th>
+						<th>DESCRIPCION</th>
+					
+					</tr>
+					<c:forEach items="${recetas}" var="receta">
+						<tr class="filas">
+						<td width="50%">${receta.getTitulo()}</td>
+						<td width="50%">${receta.getDescripcion()}</td>
+						
+						
+					</c:forEach>
+				</table>
+
 			</div>
+
+		</div>
+		<!-- /Fin contenedor de receta -->
+
+
 		</div>
 		<div class="col-md-2"></div>
 	</div>

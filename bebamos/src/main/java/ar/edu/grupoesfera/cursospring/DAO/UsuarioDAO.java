@@ -1,11 +1,14 @@
 package ar.edu.grupoesfera.cursospring.DAO;
 
+import java.util.List;
+
 import ar.edu.grupoesfera.cursospring.modelo.Usuario;
 
 public interface UsuarioDAO {
 	public void agregarUsuario(Usuario usuario);
 	public void deleteUsuario(int id);
-	public void editarUsuarioNomUs(String usuario, int id);
-	public void editarUsuarioPass(String password, int id);
+	public Usuario obtenerUsuario(Integer id);
+	public List<Usuario> listarUsuario();
+
 }
 

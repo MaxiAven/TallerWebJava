@@ -20,43 +20,56 @@ public class RecetaDAOImpl implements RecetaDAO {
 		this.em= em;
 	}
 	
+	
 	public void agregarReceta(Receta receta){
 		em.merge(receta);
 	}
 	
-	public void editarDetalleReceta(String detalle, int id){
-		String consulta = "update receta set detalle = :detalle" +"where id_receta = :id";
-		Query query = em.createQuery(consulta);
-		query.setParameter("detalle",detalle);
-		query.setParameter("id", id);
-		query.executeUpdate();
-		
-	}
-
-	public void editarTituloReceta(String titulo, int id){
-		String consulta = "update receta set titulo = :titulo" + "where id_receta = :id";
-		Query query = em.createQuery(consulta);
-		query.setParameter("titulo", titulo);
-		
-	}
-	
-	public void deleteReceta(int id){
-		String consulta = "delete from receta where id_receta = :id";
-		Query query = em.createQuery(consulta);
-		query.setParameter("id", id);
-		query.executeUpdate();
-	}
-	
 	@SuppressWarnings("unchecked")
 	public List<Receta> listarRecetas(){
-		return em.createQuery("select a from receta a order by a.id_receta").getResultList();
+		return em.createQuery("select a from Receta a order by a.IdReceta").getResultList();
+	}
+	
+
+
+	public void editarReceta(Integer id, String titulo, String descripcion){
+		String consulta = "update Receta set titulo = :titulo, descripcion = :descripcion" + " where IdReceta = :id";
+		Query query = em.createQuery(consulta);
+		query.setParameter("titulo",titulo);
+		query.setParameter("descripcion",descripcion);
+		query.setParameter("id",id);
+		query.executeUpdate();
+		
+	}
+	
+	public Receta obtenerReceta(Integer id){
+		String consulta = "select a from Receta a where a.IdReceta = :id";
+		Query query = em.createQuery(consulta);
+		query.setParameter("id", id);
+		return (Receta)query.getSingleResult();
+	}
+	
+	public void deleteReceta(Integer id){
+		String consulta = "delete from Receta where IdReceta = :id";
+		Query query = em.createQuery(consulta);
+		query.setParameter("id", id);
+		query.executeUpdate();
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<Receta> recetasConBebidas(String nombre){
-		String consulta = "select a from receta r join bebida b on r.id_receta=b.id_receta where r.descripcion like %:nombre%";
+		String consulta = "select r from Receta r where r.titulo like :nombre";
 		Query query = em.createQuery(consulta);
 		query.setParameter("nombre", nombre);
+		return query.getResultList();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Receta> recetasConIngredientes(String ingrediente1, String ingrediente2){
+		String consulta = "select r from Receta r where r.descripcion like :ingrediente1 and  r.descripcion like :ingrediente2";
+		Query query = em.createQuery(consulta);
+		query.setParameter("ingrediente1","%" + ingrediente1 + "%" );
+		query.setParameter("ingrediente2","%" + ingrediente2 + "%" );
 		return query.getResultList();
 	}
 }

@@ -1,3 +1,5 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +10,17 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
-<link rel="stylesheet" type="text/css" href="css/stylo.css">
 
 <title>QueTomamos | Recetas con Onda</title>
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Bootstrap theme -->
 <!-- <link href="css/bootstrap-theme.min.css" rel="stylesheet">-->
 
 </head>
 
-<body role="document">
+<body class="login" role="document">
 
 	<!-- Fixed navbar -->
 	<nav class="menu navbar navbar-inverse">
@@ -32,44 +33,79 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">TomemosAlgo.com</a>
+				<a class="navbar-brand" href="#">Panel de Administración</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 
-				<form class="navbar-form navbar-left" action="buscarReceta" method="GET">
-					<div class="form-group">
-						<input type="text" name="id" class="form-control"	placeholder="Busca un trago">
-					</div>
-					<input type="submit" value="Buscar" class="btn btn-default"></input>
-				</form>
-
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="index">Home</a></li>
-					<li><a href="login">Ingresar</a></li>
 
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" data-hover="dropdown"> Menu <b
+							class="caret"></b>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="lista">Ver Recetas</a></li>
+							<li><a href="cargarReceta">Cargar Receta</a></li>
+							<li><a href="listaUsuario">Ver Usuarios</a></li>
+							<li><a href="index">Cerrar Sesión</a></li>
+						</ul></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
 
+
 	<div class="container">
 		<div class="col-md-2"></div>
-		<div class="col-md-8 contenido">
-			<div class="jumbotron">
-				<h2>TomemosAlgo.com</h2>
-				<h3>Es un sitio para que puedas disfrutar de buenos tragos.</h3>
+		<div class="col-md-8">
+			<!-- Comienzo contenedor de receta -->
+			
+			<div class="panel panel-default md">
+				<div class="panel-heading tcolor">
+					<!-- Comienzo contenedor de receta -->
 
-				<a href="receta" class="btn btn-success btnLista">Ver Recetas</a>
+					<h3 align="center">LISTA DE USUARIOS</h3>
+				</div>
+				<table class="table table-hover fondoTabla">
+					<tr>
+						<th>NOMBRE DE USUARIO</th>
+						<th>CONSTRASEÑA</th>
+						<th>ACCIÓN</th>
+					</tr>
+					<c:forEach items="${listaUsuarios}" var="usuario">
+						<tr class="filas">
+									<td width="50%">${usuario.getNombreUsuario()}</td>
+						<td width="50%">${usuario.getPassword()}</td>
+						<td width="20px"><a
+							href='eliminarUsuario?id=${usuario.getId()}'> <input
+								type="submit" value="Eliminar Usuario" class="btn btn-danger" />
+						</a></td>
+						
+						
+					</c:forEach>
+				</table>
+
 			</div>
+			<!-- /Fin contenedor de receta -->
+	
+
 		</div>
+		<!-- /Fin contenedor de receta -->
+
+
 		<div class="col-md-2"></div>
 	</div>
 	<!-- /container -->
 
+	<footer class="footer">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<p>®Todos los derechos reservados | 2016</p>
+		</div>
+		<div class="col-md-3"></div>
 
-
-
+	</footer>
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->

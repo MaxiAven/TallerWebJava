@@ -1,3 +1,4 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +9,17 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
-<link rel="stylesheet" type="text/css" href="css/stylo.css">
 
 <title>QueTomamos | Recetas con Onda</title>
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Bootstrap theme -->
 <!-- <link href="css/bootstrap-theme.min.css" rel="stylesheet">-->
 
 </head>
 
-<body role="document">
+<body class="login" role="document">
 
 	<!-- Fixed navbar -->
 	<nav class="menu navbar navbar-inverse">
@@ -34,18 +34,17 @@
 				</button>
 				<a class="navbar-brand" href="#">TomemosAlgo.com</a>
 			</div>
+			<form class="navbar-form navbar-left">
+				<div class="form-group">
+					<input type="text" class="form-control"
+						placeholder="Busca un trago">
+				</div>
+				<button type="submit" class="btn btn-default">Buscar</button>
+			</form>
 			<div id="navbar" class="navbar-collapse collapse">
-
-				<form class="navbar-form navbar-left" action="buscarReceta" method="GET">
-					<div class="form-group">
-						<input type="text" name="id" class="form-control"	placeholder="Busca un trago">
-					</div>
-					<input type="submit" value="Buscar" class="btn btn-default"></input>
-				</form>
-
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="index">Home</a></li>
-					<li><a href="login">Ingresar</a></li>
+					<li><a href="index">Home</a></li>
+					<li class="active"><a href="login">Ingresar</a></li>
 
 				</ul>
 			</div>
@@ -54,22 +53,34 @@
 	</nav>
 
 	<div class="container">
-		<div class="col-md-2"></div>
-		<div class="col-md-8 contenido">
-			<div class="jumbotron">
-				<h2>TomemosAlgo.com</h2>
-				<h3>Es un sitio para que puedas disfrutar de buenos tragos.</h3>
+		<div class="col-md-4"></div>
+		<div class="col-md-4 contenido">
 
-				<a href="receta" class="btn btn-success btnLista">Ver Recetas</a>
+			<div class="panel panel-default md">
+				<div class="panel-heading tcolor">
+					<h3>TomemosAlgo</h3>
+				</div>
+				<div class="panel-body">
+
+					<p>El usuario fue creado con éxito</p>
+					<a href="login">Ir al Login</a>
+
+				</div>
 			</div>
+
 		</div>
-		<div class="col-md-2"></div>
+		<div class="col-md-4"></div>
 	</div>
 	<!-- /container -->
 
+	<footer class="footer">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<p>®Todos los derechos reservados | 2016</p>
+		</div>
+		<div class="col-md-3"></div>
 
-
-
+	</footer>
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->

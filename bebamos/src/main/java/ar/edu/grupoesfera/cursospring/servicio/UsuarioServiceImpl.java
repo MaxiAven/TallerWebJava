@@ -1,10 +1,13 @@
 package ar.edu.grupoesfera.cursospring.servicio;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import ar.edu.grupoesfera.cursospring.DAO.UsuarioDAO;
+
 import ar.edu.grupoesfera.cursospring.modelo.Usuario;
 
 @Service(value = "UsuarioService")
@@ -24,15 +27,18 @@ public class UsuarioServiceImpl implements UsuarioService {
 	public void deleteUsuario(int id) {
 		usuarioDAO.deleteUsuario(id);
 	}
-
+	
+	
+	
+	
 	@Transactional
-	public void editarUsuarioNomUs(String usuario, int id) {
-		usuarioDAO.editarUsuarioNomUs(usuario, id);
+	public Usuario obtenerUsuario(Integer id){
+		return usuarioDAO.obtenerUsuario(id);
 	}
-
+	
 	@Transactional
-	public void editarUsuarioPass(String password, int id) {
-		usuarioDAO.editarUsuarioPass(password, id);
+	public List<Usuario> listarUsuario(){
+		return usuarioDAO.listarUsuario();
 	}
 
 }
